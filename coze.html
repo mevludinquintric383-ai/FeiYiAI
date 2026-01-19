@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>非遗智能体示例</title>
+  <style>
+    /* 想让悬浮球出现在别处就改这里 */
+    #coze-entry {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>欢迎体验非遗智能体</h1>
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7590695409266884642',
+      islframe:false 
+    },
+    componentProps: {
+      title: 'Coze',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_IXlr4Ki4EnFf944FxpAYdPt5JWah27ZjwmtuSiyW3Xw8syLXCfSNnMajo6EcBgJi',
+      onRefreshToken: function () {
+        return 'pat_IXlr4Ki4EnFf944FxpAYdPt5JWah27ZjwmtuSiyW3Xw8syLXCfSNnMajo6EcBgJi'
+      }
+    }
+  });
+</script>
+</body>
+</html>
